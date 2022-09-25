@@ -124,6 +124,7 @@ def get_QR(self, uuid=None, enableCmdQR=False, picDir=None, qrCallback=None):
     return qrStorage
 
 def check_login(self, uuid=None):
+    time.sleep(6)  #new version add sleep time for login confirm  wait 5s
     uuid = uuid or self.uuid
     url = '%s/cgi-bin/mmwebwx-bin/login' % config.BASE_URL
     localTime = int(time.time())
